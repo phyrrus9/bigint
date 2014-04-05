@@ -3,9 +3,10 @@ Library of big integers. © 2014 Ethan Laur
 Current issues:
 right now, all bigints have the following issues
 1. All numbers are unsigned, so 1-2=0
-2. All numbers are being allocated as 256-bit (this is first priority)
-3. A constant > 255 cannot be accurately assigned (simple math issue)
+2. A constant > 255 cannot be accurately assigned (simple math issue)
+
+Current in testing:
+1. All numbers are being allocated as 64 bit, they /should/ auto-resize themselves
 
 It should build just fine, all standard C++ operators are overloaded, 
-except for the binary bitwise operators, which seemed like they should 
-maybe be added later
+including bitwise operators.

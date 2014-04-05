@@ -7,10 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A201E0F18EEFF7000218E9D /* unaryops.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A201E0E18EEFF7000218E9D /* unaryops.cpp */; };
+		4A201E1118EEFFE100218E9D /* bitwiseops.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A201E1018EEFFE100218E9D /* bitwiseops.cpp */; };
+		4A201E1318EF001600218E9D /* unarybitwiseops.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A201E1218EF001600218E9D /* unarybitwiseops.cpp */; };
+		4A201E1518EF005300218E9D /* comparisonops.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A201E1418EF005300218E9D /* comparisonops.cpp */; };
+		4A201E1718EF008000218E9D /* arithmaticops.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A201E1618EF008000218E9D /* arithmaticops.cpp */; };
+		4A201E1918EF00BB00218E9D /* arithmatichelpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A201E1818EF00BB00218E9D /* arithmatichelpers.cpp */; };
+		4A201E1C18EF012E00218E9D /* miscoperations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A201E1B18EF012E00218E9D /* miscoperations.cpp */; };
 		4A2D68EB18EDD8F200E94FE3 /* bigint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A2D68E918EDD8F200E94FE3 /* bigint.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A201E0E18EEFF7000218E9D /* unaryops.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = unaryops.cpp; sourceTree = "<group>"; };
+		4A201E1018EEFFE100218E9D /* bitwiseops.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bitwiseops.cpp; sourceTree = "<group>"; };
+		4A201E1218EF001600218E9D /* unarybitwiseops.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = unarybitwiseops.cpp; sourceTree = "<group>"; };
+		4A201E1418EF005300218E9D /* comparisonops.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = comparisonops.cpp; sourceTree = "<group>"; };
+		4A201E1618EF008000218E9D /* arithmaticops.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = arithmaticops.cpp; sourceTree = "<group>"; };
+		4A201E1818EF00BB00218E9D /* arithmatichelpers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = arithmatichelpers.cpp; sourceTree = "<group>"; };
+		4A201E1A18EF00D800218E9D /* arithmatichelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = arithmatichelpers.h; sourceTree = "<group>"; };
+		4A201E1B18EF012E00218E9D /* miscoperations.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = miscoperations.cpp; sourceTree = "<group>"; };
 		4A2D68DC18EDD8C100E94FE3 /* liblibbig.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = liblibbig.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A2D68E918EDD8F200E94FE3 /* bigint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bigint.cpp; sourceTree = "<group>"; };
 		4A2D68EA18EDD8F200E94FE3 /* bigint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bigint.h; sourceTree = "<group>"; };
@@ -30,8 +45,8 @@
 		4A2D68D318EDD8C100E94FE3 = {
 			isa = PBXGroup;
 			children = (
-				4A2D68E418EDD8D500E94FE3 /* src */,
 				4A2D68E318EDD8CE00E94FE3 /* include */,
+				4A2D68E418EDD8D500E94FE3 /* src */,
 				4A2D68DD18EDD8C100E94FE3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,7 +62,8 @@
 		4A2D68E318EDD8CE00E94FE3 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				4A2D68E918EDD8F200E94FE3 /* bigint.cpp */,
+				4A2D68EA18EDD8F200E94FE3 /* bigint.h */,
+				4A201E1A18EF00D800218E9D /* arithmatichelpers.h */,
 			);
 			name = include;
 			sourceTree = "<group>";
@@ -55,7 +71,14 @@
 		4A2D68E418EDD8D500E94FE3 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				4A2D68EA18EDD8F200E94FE3 /* bigint.h */,
+				4A2D68E918EDD8F200E94FE3 /* bigint.cpp */,
+				4A201E1B18EF012E00218E9D /* miscoperations.cpp */,
+				4A201E1818EF00BB00218E9D /* arithmatichelpers.cpp */,
+				4A201E1618EF008000218E9D /* arithmaticops.cpp */,
+				4A201E1418EF005300218E9D /* comparisonops.cpp */,
+				4A201E0E18EEFF7000218E9D /* unaryops.cpp */,
+				4A201E1018EEFFE100218E9D /* bitwiseops.cpp */,
+				4A201E1218EF001600218E9D /* unarybitwiseops.cpp */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -121,7 +144,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A201E1318EF001600218E9D /* unarybitwiseops.cpp in Sources */,
+				4A201E0F18EEFF7000218E9D /* unaryops.cpp in Sources */,
+				4A201E1718EF008000218E9D /* arithmaticops.cpp in Sources */,
+				4A201E1C18EF012E00218E9D /* miscoperations.cpp in Sources */,
 				4A2D68EB18EDD8F200E94FE3 /* bigint.cpp in Sources */,
+				4A201E1118EEFFE100218E9D /* bitwiseops.cpp in Sources */,
+				4A201E1918EF00BB00218E9D /* arithmatichelpers.cpp in Sources */,
+				4A201E1518EF005300218E9D /* comparisonops.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,32 +24,44 @@ public:
 	void resize(unsigned int newsize);
 	char *c_str(); //dumps it out in a char buffer
 	//unary
-	bigint operator =  (const bigint old);
-	friend bigint operator-(const bigint &old);
-	bigint operator -= (const bigint that);
-	bigint operator += (const bigint that);
-	bigint operator *= (const bigint that);
-	bigint operator /= (const bigint that);
-	bigint operator %= (const bigint that);
-	bigint operator ++ ();            //prefix ++
-	bigint operator -- ();            //prefix --
-	bigint operator ++ (int);         //postfix ++
-	bigint operator -- (int);         //postfix --
+	friend bigint operator -   (const bigint &old);
+	bigint        operator =   (const bigint old);
+	bigint        operator -=  (const bigint that);
+	bigint        operator +=  (const bigint that);
+	bigint        operator *=  (const bigint that);
+	bigint        operator /=  (const bigint that);
+	bigint        operator %=  (const bigint that);
+	bigint        operator ++  ();            //prefix ++
+	bigint        operator --  ();            //prefix --
+	bigint        operator ++  (int);         //postfix ++
+	bigint        operator --  (int);         //postfix --
+	//unary bitwise
+	bigint        operator |=  (const bigint &old);
+	bigint        operator &=  (const bigint &old);
+	bigint        operator ^=  (const bigint &old);
+	//unary shift
+	bigint        operator <<= (const unsigned int);
+	bigint        operator >>= (const unsigned int);
 	//comparisons
-	friend char operator == (const bigint &lhs, const bigint &rhs);
-	friend char operator != (const bigint &lhs, const bigint &rhs);
-	friend char operator <  (const bigint &lhs, const bigint &rhs);
-	friend char operator >  (const bigint &lhs, const bigint &rhs);
-	friend char operator <= (const bigint &lhs, const bigint &rhs);
-	friend char operator >= (const bigint &lhs, const bigint &rhs);
+	friend char   operator ==  (const bigint &lhs, const bigint &rhs);
+	friend char   operator !=  (const bigint &lhs, const bigint &rhs);
+	friend char   operator <   (const bigint &lhs, const bigint &rhs);
+	friend char   operator >   (const bigint &lhs, const bigint &rhs);
+	friend char   operator <=  (const bigint &lhs, const bigint &rhs);
+	friend char   operator >=  (const bigint &lhs, const bigint &rhs);
 	//arithmatic
-	friend bigint operator +  (const bigint &lhs, const bigint &rhs);
-	friend bigint operator -  (const bigint &lhs, const bigint &rhs);
-	friend bigint operator *  (const bigint &lhs, const bigint &rhs);
-	friend bigint operator /  (const bigint &lhs, const bigint &rhs);
-	friend bigint operator %  (const bigint &lhs, const bigint &rhs);
+	friend bigint operator +   (const bigint &lhs, const bigint &rhs);
+	friend bigint operator -   (const bigint &lhs, const bigint &rhs);
+	friend bigint operator *   (const bigint &lhs, const bigint &rhs);
+	friend bigint operator /   (const bigint &lhs, const bigint &rhs);
+	friend bigint operator %   (const bigint &lhs, const bigint &rhs);
+	//bitwise
+	friend bigint operator |   (const bigint &lhs, const bigint &rhs);
+	friend bigint operator &   (const bigint &lhs, const bigint &rhs);
+	friend bigint operator ^   (const bigint &lhs, const bigint &rhs);
+	//shifts
+	friend bigint operator <<  (const bigint &lhs, const unsigned int);
+	friend bigint operator >>  (const bigint &lhs, const unsigned int);
 };
-
-void divmod(const bigint &num, const bigint &denom, bigint &div, bigint &mod);
 
 #endif /* defined(__libbig__bigint__) */
