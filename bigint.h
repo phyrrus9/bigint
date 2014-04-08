@@ -24,6 +24,7 @@ public:
 	unsigned int getWidth() const;
 	void resize(unsigned int newsize);
 	char *c_str(); //dumps it out in a char buffer
+	unsigned char *getdata(); //returns a clone of the data
 	//unary
 	friend bigint operator -   (const bigint &old);
 	bigint        operator =   (const bigint old);

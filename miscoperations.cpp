@@ -48,3 +48,12 @@ char * bigint::c_str()
 	}
 	return buf;
 }
+
+unsigned char * bigint::getdata()
+{
+	unsigned int i;
+	unsigned char *data = new unsigned char[this->width];
+	for (i = 0; i < this->width; i++)
+		data[i] = this->data[i];
+	return data;
+}
