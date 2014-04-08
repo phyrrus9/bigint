@@ -8,6 +8,7 @@
 
 #include "bigint.h"
 #include "arithmatichelpers.h"
+#include <stdio.h>
 
 bigint operator +  (const bigint &lhs, const bigint &rhs)
 {
@@ -32,8 +33,15 @@ bigint operator -  (const bigint &lhs, const bigint &rhs)
 
 bigint operator *  (const bigint &lhs, const bigint &rhs)
 {
-	bigint i, ret = lhs;
+	bigint i, ret = lhs, j;
 	doresize(ret, lhs, rhs);
+	j.resize(ret.getWidth());
+	/*j = rhs / 2;
+	for (i = 0; i < j; i++)
+		ret <<= 1;
+	j = rhs % 2;
+	for (i = 1; i < j; i++)
+	 ret += lhs;*/ //hopefully, this algorithm works eventually.
 	for (i = 1; i < rhs; i++)
 		ret += lhs;
 	return ret;

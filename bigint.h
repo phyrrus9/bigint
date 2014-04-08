@@ -19,6 +19,7 @@ public:
 	bigint(unsigned int width = 8, int value = 0);
 	bigint(const int value); //just calls bigint(8, value);
 	bigint(const bigint &old);
+	bigint(unsigned char *data, unsigned int width); //actually init the class with data
 	~bigint();
 	unsigned int getWidth() const;
 	void resize(unsigned int newsize);

@@ -40,6 +40,15 @@ bigint::bigint(const bigint &old)
 		this->data[i] = old.data[i];
 }
 
+bigint::bigint(unsigned char *data, unsigned int width)
+{
+	unsigned int i;
+	this->width = width;
+	this->data = new unsigned char[this->width];
+	for (i = 0; i < this->width; i++)
+		this->data[i] = data[i];
+}
+
 bigint::~bigint()
 {
 	delete data;
