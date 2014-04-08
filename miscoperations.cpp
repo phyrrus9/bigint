@@ -57,3 +57,10 @@ unsigned char * bigint::getdata()
 		data[i] = this->data[i];
 	return data;
 }
+
+void bigint::setrawdata(unsigned char *data)
+{
+	unsigned int i;
+	for (i = 0; i < this->width; i++)
+		this->data[i] = data[i];
+}

@@ -25,6 +25,7 @@ public:
 	void resize(unsigned int newsize);
 	char *c_str(); //dumps it out in a char buffer
 	unsigned char *getdata(); //returns a clone of the data
+	void setrawdata(unsigned char *data); //set raw data, assume already resized
 	//unary
 	friend bigint operator -   (const bigint &old);
 	bigint        operator =   (const bigint old);
