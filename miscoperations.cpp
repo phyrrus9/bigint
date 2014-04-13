@@ -24,11 +24,12 @@ unsigned int bigint::getWidth() const
 void bigint::resize(unsigned int newsize)
 {
 	unsigned char *newdata = new unsigned char[newsize];
-	unsigned int i;
+	long i, j; //account for a bit of signededness
 	if (this->data != NULL)
 	{
 		for (i = 0; i < newsize; i++) newdata[i] = 0;
-		for (i = 0; i < this->getWidth(); i++) newdata[i] = this->data[i];
+		for (j = newsize - 1, i = this->getWidth() - 1; j >= 0; i--, j--)
+			newdata[j] = this->data[i]; //copy it backwards (little endian)
 		delete this->data;
 	}
 	this->data = newdata;
